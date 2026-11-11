@@ -1,0 +1,1140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Little Loom — Little Thread Big Love | Handmade Crochet, Flowers, Candles & Gifting</title>
+  <meta name="description" content="Little Loom is a world of cute, creative and handmade treasures! Adorable crochet keychains, beautiful crochet flowers, cozy accessories, decorative candles and unique gifting items crafted with love in Bhubaneswar, Odisha.">
+  <meta name="theme-color" content="#F8F5EF">
+
+  <!-- Favicon: Official Little Loom Logo -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/logo.svg">
+
+  <!-- Google Fonts: Cormorant Garamond, Lora, DM Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Lora:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ivory: {
+              DEFAULT: '#F8F5EF',
+              light: '#FDFBF7',
+              subtle: '#F3EFE7'
+            },
+            oatmeal: {
+              DEFAULT: '#E9DFD1',
+              light: '#F0E8DC',
+              dark: '#D4C6B3'
+            },
+            sage: {
+              DEFAULT: '#A3AD91',
+              dark: '#6C775B',
+              light: '#EBF0E6'
+            },
+            terracotta: {
+              DEFAULT: '#B8795E',
+              hover: '#9E634A',
+              light: '#F7EBE6',
+              muted: '#CA917A'
+            },
+            espresso: {
+              DEFAULT: '#40352F',
+              body: '#574B43',
+              muted: '#827267',
+              light: '#A89B91'
+            },
+            dustyRose: {
+              DEFAULT: '#D9B9B0',
+              light: '#F6EDEA'
+            }
+          },
+          fontFamily: {
+            serif: ['Cormorant Garamond', 'Garamond', 'Playfair Display', 'Georgia', 'serif'],
+            editorial: ['Lora', 'Georgia', 'serif'],
+            sans: ['DM Sans', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom Design System Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-[#F8F5EF] text-[#574B43] font-sans paper-texture selection:bg-[#F6EDEA] selection:text-[#B8795E]">
+
+  <!-- ==============================================================
+       1. TOP ANNOUNCEMENT STRIP
+       ============================================================== -->
+  <div class="announcement-bar flex items-center justify-center gap-2">
+    <span>🧶 “Little Thread Big Love”</span>
+    <span class="hidden md:inline">• Handcrafted in Bhubaneswar, Odisha</span>
+    <span class="hidden lg:inline">• Complimentary Gift Box & Free Dispatch over ₹999</span>
+    <a href="#shop" class="font-medium underline ml-1">Explore Cute Treasures →</a>
+  </div>
+
+  <!-- ==============================================================
+       2. HEADER & NAVIGATION
+       ============================================================== -->
+  <header id="siteHeader" class="site-header">
+    <div class="container flex items-center justify-between py-3">
+      
+      <!-- Brand Identity / Official PRD Logo -->
+      <a href="#home" class="flex items-center gap-3 group text-decoration-none">
+        <div class="relative w-11 h-11 flex-shrink-0">
+          <img src="assets/images/logo.svg" alt="The Little Loom Official Logo" class="brand-logo-img w-full h-full">
+        </div>
+        <div class="flex flex-col">
+          <span class="brand-title">The Little Loom</span>
+          <span class="brand-subtitle">Little Thread Big Love</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="hidden lg:flex items-center gap-8">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#shop" class="nav-link">Shop</a>
+        <a href="#collections" class="nav-link">Collections</a>
+        <a href="#about" class="nav-link">About Us</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Utilities: Wishlist, Cart Drawer, Mobile Toggle -->
+      <div class="flex items-center gap-2.5 sm:gap-3">
+        <!-- Wishlist Icon -->
+        <a href="#shop" class="btn-icon relative" title="Saved Favorites" aria-label="Favorites">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+          </svg>
+          <span id="wishlistBadgeCount" class="hidden absolute -top-1 -right-1 bg-[#A3AD91] text-white text-[0.62rem] font-bold w-4 h-4 rounded-full flex items-center justify-center">0</span>
+        </a>
+
+        <!-- Cart Button -->
+        <button id="headerCartBtn" class="btn-icon relative" aria-label="Open Shopping Basket">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+          </svg>
+          <span id="cartBadgeCount" class="hidden absolute -top-1 -right-1 bg-[#B8795E] text-white text-[0.62rem] font-bold w-4 h-4 rounded-full flex items-center justify-center">0</span>
+        </button>
+
+        <!-- CTA Button (Desktop) -->
+        <a href="#shop" class="hidden sm:inline-flex btn-primary text-xs py-2 px-4">
+          <span>Shop Collection</span>
+        </a>
+
+        <!-- Mobile Menu Hamburger -->
+        <button id="mobileMenuBtn" class="lg:hidden btn-icon" aria-label="Toggle Navigation Menu">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobileNavDrawer" class="hidden lg:hidden bg-[#F8F5EF] border-b border-[#E9DFD1] px-6 py-6 space-y-4">
+      <div class="flex justify-between items-center pb-3 border-b border-[#E9DFD1]">
+        <div class="flex items-center gap-2">
+          <img src="assets/images/logo.svg" alt="Logo" class="w-7 h-7 rounded-full border border-[#D4C6B3]">
+          <span class="font-serif text-lg font-medium text-[#40352F]">The Little Loom</span>
+        </div>
+        <button id="closeMobileMenuBtn" class="text-[#827267] hover:text-[#B8795E]">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+      <div class="flex flex-col gap-3 font-medium text-sm">
+        <a href="#home" onclick="document.getElementById('mobileNavDrawer').classList.add('hidden')" class="hover:text-[#B8795E] py-1">Home</a>
+        <a href="#shop" onclick="document.getElementById('mobileNavDrawer').classList.add('hidden')" class="hover:text-[#B8795E] py-1">Shop Handcrafted Treasures</a>
+        <a href="#collections" onclick="document.getElementById('mobileNavDrawer').classList.add('hidden')" class="hover:text-[#B8795E] py-1">Curated Collections</a>
+        <a href="#about" onclick="document.getElementById('mobileNavDrawer').classList.add('hidden')" class="hover:text-[#B8795E] py-1">About Us & Our Story</a>
+        <a href="#contact" onclick="document.getElementById('mobileNavDrawer').classList.add('hidden')" class="hover:text-[#B8795E] py-1">Contact & Custom Orders</a>
+      </div>
+      <div class="pt-4 border-t border-[#E9DFD1]">
+        <p class="text-xs text-[#827267] mb-3">📍 Regional College of Management, Bhubaneswar, Odisha.</p>
+        <a href="#shop" onclick="document.getElementById('mobileNavDrawer').classList.add('hidden')" class="btn-primary w-full text-center text-xs py-2.5">Explore All Handcrafted Pieces</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ==============================================================
+         3. HERO SECTION (EDITORIAL ASYMMETRIC LAYOUT)
+         ============================================================== -->
+    <section id="home" class="relative pt-12 pb-16 md:pt-20 md:pb-24 border-b border-[#E9DFD1] overflow-hidden">
+      <div class="container">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+          
+          <!-- Editorial Text Column (7 cols) -->
+          <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+            
+            <div class="inline-flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-[#A3AD91] animate-pulse"></span>
+              <span class="tag-editorial">Artisan Studio • Bhubaneswar, Odisha</span>
+            </div>
+
+            <h1 class="text-[#40352F]">
+              Cute, Creative & Handcrafted.<br>
+              <span class="font-editorial-italic text-[#B8795E] font-normal">Little Thread</span> Big Love.
+            </h1>
+
+            <p class="text-base sm:text-lg text-[#574B43] max-w-xl mx-auto lg:mx-0 leading-relaxed font-normal">
+              Little Loom is a world of cute, creative and handmade treasures! From adorable crochet keychains and beautiful everlasting crochet flowers to decorative candles and unique gifting items, we bring little things that create big smiles.
+            </p>
+
+            <!-- Action CTAs -->
+            <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3.5 pt-2">
+              <a href="#shop" class="btn-primary w-full sm:w-auto">
+                <span>Explore the Collection</span>
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+              </a>
+              <a href="#about" class="btn-secondary w-full sm:w-auto">
+                <span>Our Story & Philosophy</span>
+              </a>
+              <a href="#contact" class="text-xs text-[#B8795E] hover:underline font-medium px-2 py-2">
+                Custom Orders & Gifting →
+              </a>
+            </div>
+
+            <!-- Authentic Artisan Details Strip -->
+            <div class="pt-6 border-t border-[#E9DFD1] flex flex-wrap items-center justify-center lg:justify-start gap-6 text-xs text-[#827267]">
+              <div class="flex items-center gap-2">
+                <span class="text-[#B8795E]">•</span>
+                <span>100% Hand-Crafted with Love</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="text-[#A3AD91]">•</span>
+                <span>Affordable for Students & Gen Z</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="text-[#40352F]">•</span>
+                <span>Plastic-Free Recycled Gifting</span>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Editorial Photography Column (5 cols) -->
+          <div class="lg:col-span-5 relative">
+            <div class="hero-editorial-wrap aspect-[4/5] max-w-md mx-auto relative group">
+              <img src="assets/images/Elegant Gold Jewellery.png" 
+                   onerror="this.onerror=null; this.src='assets/images/Wool and Knit.jpg';"
+                   alt="The Little Loom Handcrafted Collection" 
+                   class="w-full h-full object-cover">    
+              
+              <!-- Floating Brand Card Badge -->
+              
+                
+              
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============================================================
+         4. FEATURED COLLECTIONS SHOWCASE (CURATED BY PRD CATEGORIES)
+         ============================================================== -->
+    <section id="collections" class="py-16 md:py-24 border-b border-[#E9DFD1]">
+      <div class="container">
+        
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-12">
+          <div>
+            <span class="tag-editorial mb-1.5 block">Handmade Categories</span>
+            <h2 class="text-[#40352F]">Explore by Handcrafted Curation</h2>
+            <p class="text-xs sm:text-sm text-[#827267] mt-1">Discover treasures made for students, youngsters, Gen Z, and thoughtful gift seekers.</p>
+          </div>
+          <a href="#shop" class="text-xs font-medium text-[#B8795E] hover:underline">View All 20 Pieces →</a>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5">
+          
+          <!-- Collection 1: Crochet Keychains -->
+          <div class="collection-card group" onclick="window.LittleLoom.filterByCategory('keychains')">
+            <div class="collection-image-wrap">
+              <img src="assets/images/Crochet Keychains.jpg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1582533561751-ef6f6ab93a2e?auto=format&fit=crop&w=600&q=80';" alt="Handmade crochet keychains and charms">
+            </div>
+            <div class="p-4 flex flex-col justify-between flex-1">
+              <div>
+                <span class="text-[0.65rem] uppercase tracking-wider text-[#A3AD91] font-semibold">01 / Pocket Charms</span>
+                <h4 class="font-serif text-base text-[#40352F] group-hover:text-[#B8795E] transition-colors mt-0.5">Crochet Keychains</h4>
+                <p class="text-xs text-[#574B43] mt-1 leading-relaxed">Mini strawberries, macramé daisy wristlets, and pocket teddy companions.</p>
+              </div>
+              <div class="mt-4 pt-3 border-t border-[#E9DFD1]/60 flex items-center justify-between text-xs text-[#B8795E] font-medium">
+                <span>Explore (4)</span>
+                <span>→</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Collection 2: Crochet Flowers -->
+          <div class="collection-card group" onclick="window.LittleLoom.filterByCategory('flowers')">
+            <div class="collection-image-wrap">
+              <img src="assets/images/Crochet Flowers.jpg?auto=format&fit=crop&w=600&q=80" onerror="this.onerror=null; this.src='assets/images/Wool and Knit.jpg';" alt="Handmade crochet flowers and bouquets">
+            </div>
+            <div class="p-4 flex flex-col justify-between flex-1">
+              <div>
+                <span class="text-[0.65rem] uppercase tracking-wider text-[#A3AD91] font-semibold">02 / Everlasting Blooms</span>
+                <h4 class="font-serif text-base text-[#40352F] group-hover:text-[#B8795E] transition-colors mt-0.5">Crochet Flowers</h4>
+                <p class="text-xs text-[#574B43] mt-1 leading-relaxed">Forever sunflowers, pastel tulip bouquets, and desk daisy pots that never fade.</p>
+              </div>
+              <div class="mt-4 pt-3 border-t border-[#E9DFD1]/60 flex items-center justify-between text-xs text-[#B8795E] font-medium">
+                <span>Explore (4)</span>
+                <span>→</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Collection 3: Crochet Accessories -->
+          <div class="collection-card group" onclick="window.LittleLoom.filterByCategory('accessories')">
+            <div class="collection-image-wrap">
+              <img src="assets/images/Wool and Knit.jpg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1517256064527-09c73fc73e38?auto=format&fit=crop&w=600&q=80';" alt="Handmade crochet accessories">
+            </div>
+            <div class="p-4 flex flex-col justify-between flex-1">
+              <div>
+                <span class="text-[0.65rem] uppercase tracking-wider text-[#A3AD91] font-semibold">03 / Cozy Knits</span>
+                <h4 class="font-serif text-base text-[#40352F] group-hover:text-[#B8795E] transition-colors mt-0.5">Crochet Accessories</h4>
+                <p class="text-xs text-[#574B43] mt-1 leading-relaxed">Cable-knit mug huggers, daisy coasters, cloud scrunchies & merino throws.</p>
+              </div>
+              <div class="mt-4 pt-3 border-t border-[#E9DFD1]/60 flex items-center justify-between text-xs text-[#B8795E] font-medium">
+                <span>Explore (4)</span>
+                <span>→</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Collection 4: Decorative Candles -->
+          <div class="collection-card group" onclick="window.LittleLoom.filterByCategory('candles')">
+            <div class="collection-image-wrap">
+              <img src="assets/images/Botanical Glow.jpg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1602874801007-bd458bb1b8b8?auto=format&fit=crop&w=600&q=80';" alt="Hand-poured botanical candles">
+            </div>
+            <div class="p-4 flex flex-col justify-between flex-1">
+              <div>
+                <span class="text-[0.65rem] uppercase tracking-wider text-[#A3AD91] font-semibold">04 / Light & Scent</span>
+                <h4 class="font-serif text-base text-[#40352F] group-hover:text-[#B8795E] transition-colors mt-0.5">Decorative Candles</h4>
+                <p class="text-xs text-[#574B43] mt-1 leading-relaxed">Wild honey amber tumblers, vanilla bubble pillars & pressed flower wax tablets.</p>
+              </div>
+              <div class="mt-4 pt-3 border-t border-[#E9DFD1]/60 flex items-center justify-between text-xs text-[#B8795E] font-medium">
+                <span>Explore (4)</span>
+                <span>→</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Collection 5: Cute Gifting Items -->
+          <div class="collection-card group" onclick="window.LittleLoom.filterByCategory('gifting')">
+            <div class="collection-image-wrap">
+              <img src="https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=600&q=80" onerror="this.onerror=null; this.src='assets/images/Elegant Gold Jewellery.png';" alt="Cute gifting items and hampers">
+            </div>
+            <div class="p-4 flex flex-col justify-between flex-1">
+              <div>
+                <span class="text-[0.65rem] uppercase tracking-wider text-[#A3AD91] font-semibold">05 / Thoughtful Keepsakes</span>
+                <h4 class="font-serif text-base text-[#40352F] group-hover:text-[#B8795E] transition-colors mt-0.5">Cute Gifting Items</h4>
+                <p class="text-xs text-[#574B43] mt-1 leading-relaxed">Speckled match strikers, embroidered linen bento bags & curated gift boxes.</p>
+              </div>
+              <div class="mt-4 pt-3 border-t border-[#E9DFD1]/60 flex items-center justify-between text-xs text-[#B8795E] font-medium">
+                <span>Explore (4)</span>
+                <span>→</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==============================================================
+         5. PRODUCT SHOWCASE (CATALOG GRID VIEW)
+         ============================================================== -->
+    <section id="shop" class="py-16 md:py-24 border-b border-[#E9DFD1]">
+      <div class="container">
+        
+        <!-- Section Header -->
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8">
+          <div>
+            <span class="tag-editorial mb-1 block">The Curated Shop</span>
+            <h2 class="text-[#40352F]">Handcrafted In Small Batches</h2>
+            <p id="productResultCount" class="text-xs text-[#827267] mt-1">Showing 20 handcrafted treasures</p>
+          </div>
+
+          <!-- Controls: Search & Sort -->
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
+            <!-- Search Input -->
+            <!-- <div class="relative min-w-[220px]">
+              <input type="text" id="productSearchInput" placeholder="Search keychains, flowers, candles..." 
+                     class="w-full pl-8 pr-3 py-1.5 text-xs rounded-sm bg-white border border-[#E9DFD1] focus:outline-none focus:border-[#B8795E] text-[#40352F] transition-colors">
+              <svg class="w-3.5 h-3.5 text-[#827267] absolute left-2.5 top-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+              </svg>
+            </div> -->
+
+            <!-- Sort Dropdown -->
+            <div class="relative">
+              <select id="productSortSelect" class="w-full text-xs py-1.5 px-3 pr-7 rounded-sm bg-white border border-[#E9DFD1] focus:outline-none focus:border-[#B8795E] text-[#40352F] font-medium appearance-none cursor-pointer">
+                <option value="featured">Sort: Featured</option>
+                <option value="price-low">Price: Low to High</option>
+                <option value="price-high">Price: High to Low</option>
+                <option value="rating">Highest Rated</option>
+                <option value="reviews">Most Popular</option>
+              </select>
+              <svg class="w-3 h-3 text-[#827267] absolute right-2.5 top-2.5 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category Tabs (Strictly Aligned with PRD) -->
+        <div class="flex items-center gap-2 overflow-x-auto pb-3 mb-8 scrollbar-none">
+          <button class="filter-tab active" data-filter="all">All Treasures (20)</button>
+          <button class="filter-tab" data-filter="keychains">Crochet Keychains (4)</button>
+          <button class="filter-tab" data-filter="flowers">Crochet Flowers (4)</button>
+          <button class="filter-tab" data-filter="accessories">Crochet Accessories (4)</button>
+          <button class="filter-tab" data-filter="candles">Decorative Candles (4)</button>
+          <button class="filter-tab" data-filter="gifting">Cute Gifting & Keepsakes (4)</button>
+        </div>
+
+        <!-- Product Grid (Dynamically Populated by app.js) -->
+        <div id="productGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- Populated by JavaScript -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==============================================================
+         6. DEDICATED COMPLETE "ABOUT US" SECTION (FROM PRD)
+         ============================================================== -->
+    <section id="about" class="py-20 md:py-28 bg-[#FDFBF7] border-b border-[#E9DFD1]">
+      <div class="container max-w-5xl mx-auto">
+        
+        <!-- Header -->
+        <div class="text-center space-y-3 mb-14">
+          <div class="inline-flex items-center justify-center gap-2">
+            <img src="assets/images/logo.svg" alt="Logo" class="w-8 h-8 rounded-full border border-[#D4C6B3]">
+            <span class="tag-editorial">About The Little Loom</span>
+          </div>
+          <h2 class="text-3xl sm:text-5xl text-[#40352F]">Small Things Create Big Happiness.</h2>
+          <p class="font-editorial-italic text-lg sm:text-xl text-[#B8795E] max-w-xl mx-auto">
+            “Little Thread Big Love”
+          </p>
+        </div>
+
+        <!-- The User's Core Story Statement (Featured Box from PRD) -->
+        <div class="about-quote-card mb-16 space-y-5">
+          <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 pb-3 border-b border-[#E9DFD1]">
+            <h3 class="font-serif text-xl sm:text-2xl text-[#40352F]">What is The Little Loom?</h3>
+            <span class="text-xs uppercase tracking-widest text-[#B8795E] font-semibold">Bhubaneswar, Odisha</span>
+          </div>
+          <p class="font-editorial text-lg sm:text-xl text-[#40352F] leading-relaxed">
+            Little Loom is a world of cute, creative and handmade treasures! From adorable crochet keychains and beautiful crochet flowers to decorative candles and unique gifting items, we bring little things that create big smiles.
+          </p>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2">
+            <div class="bg-[#F8F5EF] p-4 rounded-sm border border-[#E9DFD1]">
+              <h4 class="font-serif text-base text-[#B8795E] font-medium mb-1">Who is it for?</h4>
+              <p class="text-xs sm:text-sm text-[#574B43] leading-relaxed">
+                For everyone who loves creativity, cuteness and thoughtful gifts! Especially students, youngsters, genZ and people who love making ordinary moments special.
+              </p>
+            </div>
+            <div class="bg-[#F8F5EF] p-4 rounded-sm border border-[#E9DFD1]">
+              <h4 class="font-serif text-base text-[#A3AD91] font-medium mb-1">Why build it?</h4>
+              <p class="text-xs sm:text-sm text-[#574B43] leading-relaxed">
+                We believe that small things can create big happiness. Our aim is to turn creativity into something special, offer affordable and unique products, and make every customer feel happy with something made or selected with love.
+              </p>
+            </div>
+          </div>
+
+          <div class="pt-4 border-t border-[#E9DFD1] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+            <p class="font-editorial-italic text-sm sm:text-base text-[#40352F]">
+              Handcrafted with mindful love by Rajanandini Dash.
+            </p>
+            <span class="text-xs text-[#827267]">📍 Regional College of Management, Bhubaneswar</span>
+          </div>
+        </div>
+
+        <!-- 3 Feature Pillars: Thoughtful Materials & Craftsmanship -->
+        <div class="pt-4 mb-12">
+          <div class="text-center max-w-lg mx-auto mb-10">
+            <span class="tag-editorial mb-1 block">Artisan Promise</span>
+            <h3 class="font-serif text-2xl text-[#40352F]">Thoughtful Materials & Honest Pricing</h3>
+            <p class="text-xs text-[#827267] mt-1">We choose pure, gentle materials and fair student-friendly pricing so everyone can enjoy handmade joy.</p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="p-6 rounded-sm bg-white border border-[#E9DFD1] space-y-2">
+              <span class="text-[0.68rem] uppercase tracking-wider font-bold text-[#B8795E]">01 / Pure Cotton & Wool</span>
+              <h4 class="font-serif text-lg text-[#40352F]">Hand-Crocheted Stitches</h4>
+              <p class="text-xs text-[#574B43] leading-relaxed">
+                We use combed organic cotton thread and soft roving wool. Every single stitch is counted by eye and shaped with wooden crochet hooks.
+              </p>
+            </div>
+
+            <div class="p-6 rounded-sm bg-white border border-[#E9DFD1] space-y-2">
+              <span class="text-[0.68rem] uppercase tracking-wider font-bold text-[#A3AD91]">02 / 100% Pure Soy Wax</span>
+              <h4 class="font-serif text-lg text-[#40352F]">Clean Botanical Candles</h4>
+              <p class="text-xs text-[#574B43] leading-relaxed">
+                Non-GMO botanical soy wax, real dried lavender and rose petals, and crackling wooden wicks. Completely paraffin-free and safe.
+              </p>
+            </div>
+
+            <div class="p-6 rounded-sm bg-white border border-[#E9DFD1] space-y-2">
+              <span class="text-[0.68rem] uppercase tracking-wider font-bold text-[#40352F]">03 / Plastic-Free Packaging</span>
+              <h4 class="font-serif text-lg text-[#40352F]">Gift-Ready Presentation</h4>
+              <p class="text-xs text-[#574B43] leading-relaxed">
+                Every parcel arrives cushioned in unbleached paper, tied with raw jute twine, scented with dried flowers, and tucked with a personal card.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Subtle Button linking back to Shop -->
+        <div class="text-center pt-2">
+          <a href="#shop" class="btn-primary text-xs py-3 px-8">
+            <span>Shop Our Collection</span>
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==============================================================
+         7. HANDCRAFTED PROCESS
+         ============================================================== -->
+    <section id="process" class="py-16 md:py-24 border-b border-[#E9DFD1]">
+      <div class="container">
+        
+        <div class="max-w-2xl mx-auto text-center mb-14 space-y-2">
+          <span class="tag-editorial">The Slow Journey</span>
+          <h2 class="text-[#40352F]">From Pure Fibers to Your Hands</h2>
+          <p class="text-xs sm:text-sm text-[#827267]">
+            Follow the mindful 4-step journey of each Little Loom piece before it makes its way to your space.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          
+          <div class="process-step-card">
+            <span class="step-number-tag">01</span>
+            <div class="h-36 rounded-sm overflow-hidden mb-3.5 bg-[#F3EFE7] border border-[#E9DFD1]">
+              <img src="assets/images/Ethical Fiber.jpg" alt="Ethical fiber and wax sourcing" class="w-full h-full object-cover">
+            </div>
+            <h4 class="font-serif text-base text-[#40352F] mb-1 font-medium">Ethical Fiber & Wax Sourcing</h4>
+            <p class="text-xs text-[#574B43] leading-relaxed">
+              We select natural combed cotton thread, pure soy wax, and cruelty-free wool for clean, tactile warmth.
+            </p>
+          </div>
+
+          <div class="process-step-card">
+            <span class="step-number-tag">02</span>
+            <div class="h-36 rounded-sm overflow-hidden mb-3.5 bg-[#F3EFE7] border border-[#E9DFD1]">
+              <img src="assets/images/Handful Pour.jpg" alt="Mindful stitching and pouring" class="w-full h-full object-cover">
+            </div>
+            <h4 class="font-serif text-base text-[#40352F] mb-1 font-medium">Mindful Hand Stitching & Pouring</h4>
+            <p class="text-xs text-[#574B43] leading-relaxed">
+              Each petal and keychain loop is crocheted stitch by stitch, and candles are poured in small micro-batches.
+            </p>
+          </div>
+
+          <div class="process-step-card">
+            <span class="step-number-tag">03</span>
+            <div class="h-36 rounded-sm overflow-hidden mb-3.5 bg-[#F3EFE7] border border-[#E9DFD1]">
+              <img src="assets/images/Quality Check.jpg" alt="Natural candle curing and quality check" class="w-full h-full object-cover">
+            </div>
+            <h4 class="font-serif text-base text-[#40352F] mb-1 font-medium">48-Hour Curing & Quality Check</h4>
+            <p class="text-xs text-[#574B43] leading-relaxed">
+              Candles rest on wooden racks for a velvety frosted cure, while crochet stitches undergo tension checks.
+            </p>
+          </div>
+
+          <div class="process-step-card">
+            <span class="step-number-tag">04</span>
+            <div class="h-36 rounded-sm overflow-hidden mb-3.5 bg-[#F3EFE7] border border-[#E9DFD1]">
+              <img src="assets/images/Handwritten Note.jpg" alt="Sustainable gift wrapping" class="w-full h-full object-cover">
+            </div>
+            <h4 class="font-serif text-base text-[#40352F] mb-1 font-medium">Recycled Wrap & Handwritten Note</h4>
+            <p class="text-xs text-[#574B43] leading-relaxed">
+              Hand-wrapped in recycled kraft paper, tied with raw jute, scented with dried lavender, and sealed with love.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==============================================================
+         8. CUSTOMER REVIEWS (WORDS FROM OUR COMMUNITY)
+         ============================================================== -->
+    <section id="reviews" class="py-16 md:py-24 border-b border-[#E9DFD1] bg-[#FDFBF7]">
+      <div class="container">
+        
+        <div class="max-w-2xl mx-auto text-center mb-12 space-y-2">
+          <span class="tag-editorial">Community Words</span>
+          <h2 class="text-[#40352F]">Loved by Students & Handmade Lovers</h2>
+          <p class="text-xs sm:text-sm text-[#827267]">
+            Reflections from customers who have welcomed our slow-made pieces into their daily rituals.
+          </p>
+        </div>
+
+        <div class="relative max-w-2xl mx-auto">
+          <div id="testimonialSlideWrap">
+            <!-- Dynamically populated by app.js -->
+          </div>
+
+          <!-- Carousel Controls -->
+          <div class="flex items-center justify-between mt-6">
+            <button id="testimonialPrev" class="btn-icon" aria-label="Previous Review">
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+            </button>
+
+            <div id="testimonialDots" class="flex items-center gap-2"></div>
+
+            <button id="testimonialNext" class="btn-icon" aria-label="Next Review">
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==============================================================
+         9. CARE GUIDE & FAQ ACCORDION
+         ============================================================== -->
+    <section id="faq" class="py-16 md:py-24 border-b border-[#E9DFD1]">
+      <div class="container max-w-3xl">
+        
+        <div class="text-center mb-12 space-y-2">
+          <span class="tag-editorial">Care & Practicalities</span>
+          <h2 class="text-[#40352F]">Frequently Asked Questions</h2>
+          <p class="text-xs sm:text-sm text-[#827267]">
+            How to care for hand-crocheted goods, candle burning tips, and custom gifting orders.
+          </p>
+        </div>
+
+        <div class="divide-y divide-[#E9DFD1]">
+          
+          <div class="faq-item active">
+            <button class="faq-button" type="button">
+              <span>How do I wash and care for hand-crocheted flowers and keychains?</span>
+              <span class="faq-icon">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              </span>
+            </button>
+            <div class="faq-content">
+              <p class="text-xs sm:text-sm text-[#574B43] leading-relaxed">
+                For crochet keychains, coasters, and mug sleeves, gentle spot-cleaning or hand washing in cool water with mild baby or wool soap is ideal. Gently press water out between clean towels without wringing, then reshape and lay flat in the shade to dry. For crochet flowers, simply dust with a soft clean paintbrush or a hairdryer on its coolest, lowest setting.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-button" type="button">
+              <span>How do I get the cleanest burn from decorative soy candles?</span>
+              <span class="faq-icon">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              </span>
+            </button>
+            <div class="faq-content">
+              <p class="text-xs sm:text-sm text-[#574B43] leading-relaxed">
+                Always trim your wick to 1/4 inch before each lighting. On the first burn of amber container candles, allow the melt pool to reach all outer edges (about 2 hours) to avoid tunneling. For sculptural pillar and bubble candles, always burn them on a heat-safe ceramic dish away from drafts.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-button" type="button">
+              <span>Can I place custom orders for birthdays, college events, or bulk hampers?</span>
+              <span class="faq-icon">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              </span>
+            </button>
+            <div class="faq-content">
+              <p class="text-xs sm:text-sm text-[#574B43] leading-relaxed">
+                Yes, absolutely! We love crafting custom flower bouquets in your favorite colors, personalized keychain sets for best friends, and bulk gift hampers for campus birthdays. You can submit our Custom Gifting form below or message Rajanandini directly on WhatsApp (+91 6372762992).
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-button" type="button">
+              <span>What is included in your complimentary gift packaging?</span>
+              <span class="faq-icon">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              </span>
+            </button>
+            <div class="faq-content">
+              <p class="text-xs sm:text-sm text-[#574B43] leading-relaxed">
+                Every order arrives gift-ready! We use 100% biodegradable recycled kraft boxes cushioned with unbleached crinkle paper, tied with raw jute twine, decorated with real dried lavender sprigs, and accompanied by a handwritten postcard with your personal greeting message.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-button" type="button">
+              <span>What are your dispatch times and shipping rates across India?</span>
+              <span class="faq-icon">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              </span>
+            </button>
+            <div class="faq-content">
+              <p class="text-xs sm:text-sm text-[#574B43] leading-relaxed">
+                Ready-to-ship pieces dispatch within 24–48 hours directly from Regional College of Management, Bhubaneswar, Odisha. Domestic delivery across India is a flat ₹49, and 100% complimentary on all orders over ₹999. Local college campus pickups can be arranged directly!
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==============================================================
+         10. DEDICATED CONTACT & CUSTOM SUPPORT SECTION (FROM PRD)
+         ============================================================== -->
+    <section id="contact" class="py-20 md:py-28 bg-[#FDFBF7] border-b border-[#E9DFD1]">
+      <div class="container max-w-5xl mx-auto">
+        
+        <div class="text-center space-y-3 mb-14">
+          <span class="tag-editorial">Contact & Customer Support</span>
+          <h2 class="text-3xl sm:text-4xl text-[#40352F]">Let’s Connect & Create With Love</h2>
+          <p class="text-xs sm:text-sm text-[#827267] max-w-md mx-auto">
+            Questions about our products, custom color requests, or want to say hello? Reach out directly to Rajanandini Dash at our Bhubaneswar studio!
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+          
+          <!-- Contact Details Cards (5 cols) -->
+          <div class="lg:col-span-5 space-y-4">
+            
+            <div class="contact-card">
+              <div class="flex items-center gap-3 mb-3">
+                <div class="w-10 h-10 rounded-full bg-[#F3EFE7] border border-[#E9DFD1] flex items-center justify-center text-[#B8795E]">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+                </div>
+                <div>
+                  <h4 class="font-serif text-base text-[#40352F] font-medium">Founder & Artisan</h4>
+                  <p class="text-xs text-[#B8795E] font-medium">Rajanandini Dash</p>
+                </div>
+              </div>
+              <p class="text-xs text-[#574B43] leading-relaxed">
+                Every Little Loom treasure is handcrafted or curated with love, care, and attention to detail.
+              </p>
+            </div>
+
+            <div class="contact-card">
+              <div class="flex items-center gap-3 mb-2">
+                <div class="w-10 h-10 rounded-full bg-[#F3EFE7] border border-[#E9DFD1] flex items-center justify-center text-[#B8795E]">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                </div>
+                <div>
+                  <h4 class="font-serif text-base text-[#40352F] font-medium">Business Studio Address</h4>
+                  <p class="text-xs text-[#827267]">Regional College of Management, Bhubaneswar, Odisha</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-card">
+              <div class="flex items-center gap-3 mb-3">
+                <div class="w-10 h-10 rounded-full bg-[#F3EFE7] border border-[#E9DFD1] flex items-center justify-center text-[#B8795E]">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                </div>
+                <div>
+                  <h4 class="font-serif text-base text-[#40352F] font-medium">Phone & WhatsApp Support</h4>
+                  <p class="text-xs text-[#827267]">Direct contact & custom inquiries</p>
+                </div>
+              </div>
+              <div class="space-y-1.5 text-xs text-[#574B43]">
+                <p>📞 Phone: <a href="tel:+916372762992" class="font-semibold text-[#40352F] hover:text-[#B8795E]">+91 6372762992</a></p>
+                <p>📞 Alternate: <a href="tel:+919861635208" class="font-semibold text-[#40352F] hover:text-[#B8795E]">+91 9861635208</a></p>
+                <p>💌 Email: <a href="mailto:rajanandinidash21@gmail.com" class="font-semibold text-[#B8795E] underline">rajanandinidash21@gmail.com</a></p>
+              </div>
+
+              <div class="pt-4 mt-2 border-t border-[#E9DFD1]">
+                <a href="https://wa.me/916372762992?text=Hi%20Rajanandini!%20I'm%20interested%20in%20custom%20handmade%20gifts%20from%20The%20Little%20Loom" 
+                   target="_blank" rel="noopener" class="btn-whatsapp w-full">
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                  <span>Chat on WhatsApp</span>
+                </a>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Custom Gifting & Inquiry Form (7 cols) -->
+          <div class="lg:col-span-7 bg-white p-6 sm:p-8 rounded-sm border border-[#E9DFD1] shadow-xs">
+            <h3 class="font-serif text-2xl text-[#40352F] mb-1">Send a Custom Gifting Inquiry</h3>
+            <p class="text-xs text-[#827267] mb-6">Have a specific crochet flower color in mind or planning a gift for a loved one? Let us know!</p>
+
+            <form id="customInquiryForm" class="space-y-4">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-xs font-medium text-[#40352F] mb-1">Your Full Name *</label>
+                  <input type="text" id="inquiryName" required placeholder="e.g. Ananya Das" class="checkout-input">
+                </div>
+                <div>
+                  <label class="block text-xs font-medium text-[#40352F] mb-1">Phone Number / Email *</label>
+                  <input type="text" id="inquiryContact" required placeholder="e.g. 9861xxxxxx or your email" class="checkout-input">
+                </div>
+              </div>
+
+              <div>
+                <label class="block text-xs font-medium text-[#40352F] mb-1">What are you looking for?</label>
+                <select id="inquiryItem" class="checkout-input bg-white cursor-pointer">
+                  <option value="crochet-flowers">Crochet Flowers & Bouquets (Sunflowers, Tulips)</option>
+                  <option value="crochet-keychains">Crochet Keychains & Charms (Strawberries, Bears)</option>
+                  <option value="decorative-candles">Decorative Candles (Amber Jars, Bubble Pillars)</option>
+                  <option value="gift-hampers">Custom Curated Gift Box Hamper</option>
+                  <option value="other-request">Other Artisan Custom Request</option>
+                </select>
+              </div>
+
+              <div>
+                <label class="block text-xs font-medium text-[#40352F] mb-1">Occasion / Custom Details</label>
+                <textarea id="inquiryMessage" rows="4" placeholder="Tell us about the occasion (Birthday, Anniversary, Dorm gift), preferred colors, or delivery date needed..." class="checkout-input"></textarea>
+              </div>
+
+              <button type="submit" class="btn-primary w-full py-3 text-xs justify-center font-medium">
+                <span>Submit Custom Inquiry</span>
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+              </button>
+
+              <p class="text-[0.68rem] text-center text-[#827267]">
+                We reply within a few hours. No spam, ever.
+              </p>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==============================================================
+         11. NEWSLETTER / COZY CLUB
+         ============================================================== -->
+    <section class="py-16 md:py-20 bg-[#F3EFE7] border-b border-[#E9DFD1]">
+      <div class="container">
+        <div class="max-w-xl mx-auto text-center space-y-3">
+          <span class="tag-editorial">The Cozy Club</span>
+          <h2 class="text-2xl sm:text-3xl text-[#40352F]">Slow Notes & Secret Seasonal Drops</h2>
+          <p class="text-xs sm:text-sm text-[#574B43]">
+            Receive quiet letters from our studio, early access to seasonal batches, and 10% off your first handcrafted order.
+          </p>
+
+          <form id="newsletterForm" class="pt-2 flex flex-col sm:flex-row items-stretch justify-center gap-2 max-w-md mx-auto">
+            <input type="email" required placeholder="Enter your email address..." 
+                   class="px-4 py-2.5 rounded-sm bg-white border border-[#D4C6B3] focus:outline-none focus:border-[#B8795E] text-xs text-[#40352F] flex-1">
+            <button type="submit" class="btn-primary text-xs py-2.5 px-5 whitespace-nowrap">
+              <span>Subscribe</span>
+            </button>
+          </form>
+
+          <p class="text-[0.68rem] text-[#827267]">
+            Use welcome coupon <strong class="text-[#40352F]">WARMTH10</strong> for 10% off, or <strong class="text-[#40352F]">STUDENT15</strong> for students!
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==============================================================
+       12. FOOTER
+       ============================================================== -->
+  <footer class="bg-[#40352F] text-[#E9DFD1] pt-14 pb-10 border-t border-[#382D28]">
+    <div class="container">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 pb-10 border-b border-[#574B43]">
+        
+        <!-- Brand Info (5 cols) -->
+        <div class="lg:col-span-5 space-y-3.5">
+          <div class="flex items-center gap-3">
+            <img src="assets/images/logo.svg" alt="The Little Loom Logo" class="w-10 h-10 rounded-full border border-[#CA917A] bg-white">
+            <div class="flex flex-col">
+              <span class="font-serif text-2xl text-white tracking-wide">The Little Loom</span>
+              <span class="text-[0.65rem] tracking-widest uppercase text-[#CA917A] font-semibold">Little Thread Big Love</span>
+            </div>
+          </div>
+
+          <p class="text-xs text-[#D4C6B3] leading-relaxed max-w-sm">
+            Little Loom offers handmade and creative products such as crochet keychains, crochet flowers, crochet accessories, decorative candles and cute gifting items.
+          </p>
+
+          <div class="text-xs text-[#D4C6B3] space-y-1.5 pt-1">
+            <p>📍 Studio: Regional College of Management, Bhubaneswar, Odisha</p>
+            <p>👤 Contact: Rajanandini Dash</p>
+            <p>📞 Phone: <a href="tel:+916372762992" class="text-white hover:text-[#D9B9B0]">+91 6372762992</a>, <a href="tel:+919861635208" class="text-white hover:text-[#D9B9B0]">+91 9861635208</a></p>
+            <p>💌 Inquiries: <a href="mailto:rajanandinidash21@gmail.com" class="text-white underline hover:text-[#D9B9B0]">rajanandinidash21@gmail.com</a></p>
+          </div>
+        </div>
+
+        <!-- Col 2: Navigation Links (3 cols) -->
+        <div class="lg:col-span-3 space-y-2.5">
+          <h4 class="font-serif text-base text-white font-medium">Quick Navigation</h4>
+          <ul class="space-y-1.5 text-xs">
+            <li><a href="#home" class="hover:text-white transition-colors">Home</a></li>
+            <li><a href="#shop" class="hover:text-white transition-colors">Shop All Treasures</a></li>
+            <li><a href="#collections" class="hover:text-white transition-colors">Curated Collections</a></li>
+            <li><a href="#about" class="hover:text-white transition-colors">About Us & Our Mission</a></li>
+            <li><a href="#contact" class="hover:text-white transition-colors">Contact & Custom Orders</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Customer Care & Social (4 cols) -->
+        <div class="lg:col-span-4 space-y-2.5">
+          <h4 class="font-serif text-base text-white font-medium">Care & Connect</h4>
+          <ul class="space-y-1.5 text-xs">
+            <li><a href="#faq" class="hover:text-white transition-colors">Crochet & Candle Care Guide</a></li>
+            <li><a href="#faq" class="hover:text-white transition-colors">Complimentary Gift Packaging</a></li>
+            <li><a href="#faq" class="hover:text-white transition-colors">Shipping Across India (Free over ₹999)</a></li>
+          </ul>
+
+          <div class="pt-3">
+            <p class="text-[0.68rem] uppercase tracking-wider text-[#D4C6B3] font-semibold mb-2">Connect With Us</p>
+            <div class="flex items-center gap-2.5">
+              <a href="https://wa.me/916372762992" target="_blank" rel="noopener" class="w-7 h-7 rounded-sm bg-[#574B43] hover:bg-[#25D366] text-white flex items-center justify-center transition-colors" title="WhatsApp Chat">
+                <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+              </a>
+              <a href="mailto:rajanandinidash21@gmail.com" class="w-7 h-7 rounded-sm bg-[#574B43] hover:bg-[#B8795E] text-white flex items-center justify-center transition-colors" title="Email Rajanandini">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="pt-6 flex flex-col sm:flex-row items-center justify-between text-[0.72rem] text-[#D4C6B3] gap-3">
+        <p>© 2026 The Little Loom. Handcrafted with mindful love in Bhubaneswar, Odisha. All rights reserved.</p>
+        <div class="flex items-center gap-2">
+          <span>Secure Payments:</span>
+          <span class="bg-[#574B43] px-1.5 py-0.5 rounded text-[0.62rem] text-white">UPI</span>
+          <span class="bg-[#574B43] px-1.5 py-0.5 rounded text-[0.62rem] text-white">Google Pay</span>
+          <span class="bg-[#574B43] px-1.5 py-0.5 rounded text-[0.62rem] text-white">PhonePe</span>
+          <span class="bg-[#574B43] px-1.5 py-0.5 rounded text-[0.62rem] text-white">Cash on Delivery</span>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ==============================================================
+       13. SLIDE-OUT CART DRAWER
+       ============================================================== -->
+  <div id="cartDrawerBackdrop" class="cart-backdrop">
+    <aside class="cart-drawer" aria-label="Shopping Basket">
+      <!-- Drawer Header -->
+      <div class="p-4 border-b border-[#E9DFD1] flex items-center justify-between bg-white">
+        <div class="flex items-center gap-2">
+          <svg class="w-4 h-4 text-[#B8795E]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
+          <h3 class="font-serif text-lg font-medium text-[#40352F]">Your Basket</h3>
+        </div>
+        <button id="closeCartBtn" class="p-1 text-[#827267] hover:text-[#B8795E] transition-colors" aria-label="Close cart">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+
+      <!-- Shipping Progress -->
+      <div class="p-3.5 bg-[#F3EFE7] border-b border-[#E9DFD1] space-y-1.5">
+        <span id="cartShippingNotice" class="text-[0.72rem] text-[#574B43] font-medium block">Add ₹999 more for Complimentary Gift Box & Dispatch</span>
+        <div class="free-shipping-progress">
+          <div id="cartShippingBar" class="free-shipping-bar" style="width: 0%"></div>
+        </div>
+      </div>
+
+      <!-- Item List -->
+      <div id="cartItemsList" class="flex-1 overflow-y-auto p-4"></div>
+
+      <!-- Drawer Footer -->
+      <div class="p-4 border-t border-[#E9DFD1] bg-white space-y-3">
+        <!-- Promo Code -->
+        <div class="flex gap-2">
+          <input type="text" id="cartPromoInput" placeholder="Code (e.g. WARMTH10 or STUDENT15)" class="uppercase flex-1 px-3 py-1 text-xs rounded-sm border border-[#D4C6B3] focus:outline-none focus:border-[#B8795E]">
+          <button id="cartPromoApplyBtn" type="button" class="btn-secondary text-xs py-1 px-3">Apply</button>
+        </div>
+        <div id="cartPromoMessage"></div>
+
+        <div class="flex items-center justify-between pt-1 border-t border-[#E9DFD1]/50">
+          <span class="text-xs text-[#574B43]">Subtotal</span>
+          <span id="cartSubtotalAmount" class="font-serif text-lg font-semibold text-[#40352F]">₹0</span>
+        </div>
+
+        <p class="text-[0.68rem] text-[#827267] text-center">Taxes & gift packaging included. Free campus dispatch.</p>
+
+        <button id="cartCheckoutBtn" class="btn-primary w-full py-2.5 text-xs font-medium justify-center">
+          <span>Proceed to Checkout</span>
+        </button>
+      </div>
+    </aside>
+  </div>
+
+  <!-- ==============================================================
+       14. INTERACTIVE CHECKOUT MODAL
+       ============================================================== -->
+  <div id="checkoutModal" class="modal-backdrop">
+    <div class="checkout-dialog p-6 sm:p-8">
+      <button id="closeCheckoutBtn" class="absolute top-4 right-4 text-[#827267] hover:text-[#B8795E] p-1">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+
+      <div class="flex items-center gap-3 pb-4 mb-5 border-b border-[#E9DFD1]">
+        <img src="assets/images/logo.svg" alt="Logo" class="w-9 h-9 rounded-full border border-[#D4C6B3]">
+        <div>
+          <h3 class="font-serif text-xl font-medium text-[#40352F]">Handmade Checkout</h3>
+          <p class="text-xs text-[#827267]">Dispatched with love from Bhubaneswar, Odisha</p>
+        </div>
+      </div>
+
+      <!-- Order Summary -->
+      <div class="bg-[#F8F5EF] p-4 rounded-sm border border-[#E9DFD1] mb-5">
+        <h4 class="text-xs font-medium uppercase tracking-wider text-[#B8795E] mb-2">Order Summary</h4>
+        <div id="checkoutSummaryList" class="space-y-1 mb-3"></div>
+        <div class="flex justify-between items-center pt-2 border-t border-[#E9DFD1]">
+          <span class="text-xs font-semibold text-[#40352F]">Total Payable:</span>
+          <span id="checkoutTotalAmount" class="font-serif text-lg font-bold text-[#B8795E]">₹0</span>
+        </div>
+      </div>
+
+      <!-- Checkout Form -->
+      <form id="checkoutForm" class="space-y-4">
+        <div>
+          <label class="block text-xs font-medium text-[#40352F] mb-1">Full Name *</label>
+          <input type="text" id="checkoutName" required placeholder="e.g. Rajat Kumar" class="checkout-input">
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div>
+            <label class="block text-xs font-medium text-[#40352F] mb-1">Phone Number (for Delivery) *</label>
+            <input type="tel" id="checkoutPhone" required placeholder="e.g. 9861635208" class="checkout-input">
+          </div>
+          <div>
+            <label class="block text-xs font-medium text-[#40352F] mb-1">Email Address</label>
+            <input type="email" id="checkoutEmail" placeholder="your.name@gmail.com" class="checkout-input">
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs font-medium text-[#40352F] mb-1">Delivery Address / Hostel / College *</label>
+          <textarea id="checkoutAddress" required rows="2" placeholder="Room/House no, Hostel/Street, Landmark..." class="checkout-input"></textarea>
+        </div>
+
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="block text-xs font-medium text-[#40352F] mb-1">City / Town *</label>
+            <input type="text" id="checkoutCity" required value="Bhubaneswar" class="checkout-input">
+          </div>
+          <div>
+            <label class="block text-xs font-medium text-[#40352F] mb-1">PIN Code *</label>
+            <input type="text" id="checkoutPin" required placeholder="751024" class="checkout-input">
+          </div>
+        </div>
+
+        <!-- Payment Mode -->
+        <div>
+          <label class="block text-xs font-medium text-[#40352F] mb-1.5">Select Payment Option</label>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+            <label class="payment-radio-card active">
+              <input type="radio" name="paymentOption" value="upi" checked class="accent-[#B8795E]">
+              <span class="text-xs font-medium text-[#40352F]">UPI / GPay / PhonePe</span>
+            </label>
+            <label class="payment-radio-card">
+              <input type="radio" name="paymentOption" value="cod" class="accent-[#B8795E]">
+              <span class="text-xs font-medium text-[#40352F]">Cash on Delivery</span>
+            </label>
+            <label class="payment-radio-card">
+              <input type="radio" name="paymentOption" value="card" class="accent-[#B8795E]">
+              <span class="text-xs font-medium text-[#40352F]">Debit / Credit Card</span>
+            </label>
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs font-medium text-[#40352F] mb-1">Custom Handwritten Note (Optional)</label>
+          <input type="text" id="checkoutGiftNote" placeholder="e.g. Happy Birthday Ananya! Love, Sneha" class="checkout-input">
+        </div>
+
+        <button type="submit" class="btn-primary w-full py-3 text-xs font-medium justify-center">
+          <span>Place Order with Love</span>
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+        </button>
+
+        <p class="text-[0.65rem] text-center text-[#827267]">
+          🔒 Secure 256-Bit SSL Checkout • Crafted & dispatched with love by The Little Loom.
+        </p>
+      </form>
+    </div>
+  </div>
+
+  <!-- ==============================================================
+       15. ORDER CONFIRMATION MODAL
+       ============================================================== -->
+  <div id="orderSuccessModal" class="modal-backdrop">
+    <div class="checkout-dialog p-6 sm:p-8 text-center max-w-md">
+      <div class="w-16 h-16 rounded-full bg-[#EBF0E6] text-[#6C775B] mx-auto mb-4 flex items-center justify-center">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M5 13l4 4L19 7"/></svg>
+      </div>
+
+      <span class="tag-editorial">Order Confirmed!</span>
+      <h3 class="font-serif text-2xl text-[#40352F] mt-1 mb-2">Thank You, <span id="confirmedCustomerName">Artisan Lover</span>!</h3>
+      <p class="text-xs text-[#574B43] leading-relaxed mb-4">
+        Your order has been received with warmth. Rajanandini is preparing your handmade treasures with brown kraft wrapping, raw jute twine, and dried lavender.
+      </p>
+
+      <div class="bg-[#F8F5EF] p-3 rounded border border-[#E9DFD1] text-xs space-y-1 mb-6 text-left">
+        <div class="flex justify-between">
+          <span class="text-[#827267]">Order Reference:</span>
+          <strong id="confirmedOrderNumber" class="text-[#B8795E]">LL-100234</strong>
+        </div>
+        <div class="flex justify-between">
+          <span class="text-[#827267]">Studio Location:</span>
+          <span class="text-[#40352F]">RCM Bhubaneswar, Odisha</span>
+        </div>
+        <div class="flex justify-between">
+          <span class="text-[#827267]">Support Contact:</span>
+          <span class="text-[#40352F]">+91 6372762992</span>
+        </div>
+      </div>
+
+      <button id="closeOrderSuccessBtn" class="btn-primary w-full py-2.5 text-xs justify-center">
+        <span>Continue Exploring Treasures</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- ==============================================================
+       16. QUICK VIEW MODAL
+       ============================================================== -->
+  <div id="quickViewModal" class="modal-backdrop">
+    <div class="modal-dialog">
+      <button id="closeQuickViewBtn" class="absolute top-3.5 right-3.5 z-20 w-7 h-7 rounded-sm bg-white/90 border border-[#E9DFD1] flex items-center justify-center text-[#827267] hover:text-[#B8795E] transition-colors" aria-label="Close modal">
+        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+      <div id="quickViewContent"></div>
+    </div>
+  </div>
+
+  <!-- ==============================================================
+       17. TOAST CONTAINER & BACK TO TOP BUTTON
+       ============================================================== -->
+  <div id="toastContainer" class="toast-container"></div>
+
+  <button id="backToTopBtn" class="back-to-top" aria-label="Scroll to top" title="Back to top">
+    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"/>
+    </svg>
+  </button>
+
+  <!-- Storefront JavaScript -->
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
