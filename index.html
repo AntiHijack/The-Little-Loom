@@ -101,7 +101,7 @@
         <a href="#home" class="nav-link active">Home</a>
         <a href="#shop" class="nav-link">Shop</a>
         <a href="#collections" class="nav-link">Collections</a>
-        <a href="#about" class="nav-link">About Us</a>
+        <a href="#about" class="nav-link">Our Story</a>
         <a href="#contact" class="nav-link">Contact</a>
       </nav>
 
@@ -165,7 +165,7 @@
 
   <main>
     <!-- ==============================================================
-         3. HERO SECTION (EDITORIAL ASYMMETRIC LAYOUT)
+         3. HERO SECTION (EDITORIAL ASYMMETRIC SPLIT LAYOUT)
          ============================================================== -->
     <section id="home" class="relative pt-12 pb-16 md:pt-20 md:pb-24 border-b border-[#E9DFD1] overflow-hidden">
       <div class="container">
@@ -174,64 +174,106 @@
           <!-- Editorial Text Column (7 cols) -->
           <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
             
-            <div class="inline-flex items-center gap-2">
-              <span class="w-2 h-2 rounded-full bg-[#A3AD91] animate-pulse"></span>
-              <span class="tag-editorial">Artisan Studio • Bhubaneswar, Odisha</span>
+            <!-- Darkened Eyebrow with superior mobile contrast -->
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#F0E8DC] border border-[#E0D4C2]">
+              <span class="w-2 h-2 rounded-full bg-[#6C775B] animate-pulse"></span>
+              <span class="text-xs uppercase tracking-widest font-bold text-[#6E3823]">Artisan Studio • Bhubaneswar, Odisha</span>
             </div>
 
-            <h1 class="text-[#40352F]">
-              Cute, Creative & Handcrafted.<br>
-              <span class="font-editorial-italic text-[#B8795E] font-normal">Little Thread</span> Big Love.
+            <!-- Scaled-Up H1 (48px - 64px desktop) & Bolder with punctuation polish -->
+            <h1 class="text-3xl sm:text-5xl lg:text-[3.75rem] font-semibold text-[#40352F] leading-[1.12] tracking-tight">
+              Cute, Creative &amp; Handcrafted.<br>
+              <span class="font-editorial-italic font-normal text-[#B8795E]">Little Thread,</span> Big Love.
             </h1>
 
+            <!-- Punchy 1-2 line subheadline -->
             <p class="text-base sm:text-lg text-[#574B43] max-w-xl mx-auto lg:mx-0 leading-relaxed font-normal">
-              Little Loom is a world of cute, creative and handmade treasures! From adorable crochet keychains and beautiful everlasting crochet flowers to decorative candles and unique gifting items, we bring little things that create big smiles.
+              Handmade crochet flowers, keychains, and decorative candles crafted in Bhubaneswar—thoughtful gifts that bring big smiles.
             </p>
 
-            <!-- Action CTAs -->
+            <!-- Decluttered Two-Action CTA Row (Conversion Prioritized) -->
             <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3.5 pt-2">
-              <a href="#shop" class="btn-primary w-full sm:w-auto">
+              <a href="#shop" class="btn-primary w-full sm:w-auto px-6 py-3 text-sm">
                 <span>Explore the Collection</span>
-                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
               </a>
-              <a href="#about" class="btn-secondary w-full sm:w-auto">
-                <span>Our Story & Philosophy</span>
-              </a>
-              <a href="#contact" class="text-xs text-[#B8795E] hover:underline font-medium px-2 py-2">
-                Custom Orders & Gifting →
+              <a href="#contact" class="btn-secondary w-full sm:w-auto px-6 py-3 text-sm border-[#B8795E] text-[#B8795E] hover:bg-[#B8795E] hover:text-white transition-colors">
+                <span>Custom Orders &amp; Gifting →</span>
               </a>
             </div>
 
-            <!-- Authentic Artisan Details Strip -->
-            <div class="pt-6 border-t border-[#E9DFD1] flex flex-wrap items-center justify-center lg:justify-start gap-6 text-xs text-[#827267]">
-              <div class="flex items-center gap-2">
-                <span class="text-[#B8795E]">•</span>
+            <!-- Elevated Trust Strip (Minimal Line Icons + Refined Copy) -->
+            <div class="pt-6 border-t border-[#E9DFD1] flex flex-wrap items-center justify-center lg:justify-start gap-4 sm:gap-6 text-xs text-[#574B43]">
+              <div class="flex items-center gap-2 font-medium">
+                <span class="w-6 h-6 rounded-full bg-[#F7EBE6] flex items-center justify-center flex-shrink-0">
+                  <svg class="w-3.5 h-3.5 text-[#B8795E]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+                </span>
                 <span>100% Hand-Crafted with Love</span>
               </div>
-              <div class="flex items-center gap-2">
-                <span class="text-[#A3AD91]">•</span>
-                <span>Affordable for Students & Gen Z</span>
+              <div class="flex items-center gap-2 font-medium">
+                <span class="w-6 h-6 rounded-full bg-[#F0E8DC] flex items-center justify-center flex-shrink-0">
+                  <svg class="w-3.5 h-3.5 text-[#6E3823]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"/></svg>
+                </span>
+                <span>Pocket-Friendly Gifting (From ₹99)</span>
               </div>
-              <div class="flex items-center gap-2">
-                <span class="text-[#40352F]">•</span>
-                <span>Plastic-Free Recycled Gifting</span>
+              <div class="flex items-center gap-2 font-medium">
+                <span class="w-6 h-6 rounded-full bg-[#EBF0E6] flex items-center justify-center flex-shrink-0">
+                  <svg class="w-3.5 h-3.5 text-[#6C775B]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 21c-4.418 0-8-3.582-8-8 0-5.25 8-11 8-11s8 5.75 8 11c0 4.418-3.582 8-8 8zm0 0v-8"/></svg>
+                </span>
+                <span>Plastic-Free Recycled Packaging</span>
               </div>
             </div>
 
           </div>
 
-          <!-- Editorial Photography Column (5 cols) -->
+          <!-- Editorial Visual Column (5 cols, Split Layout with Terracotta Framing & Collage) -->
           <div class="lg:col-span-5 relative">
-            <div class="hero-editorial-wrap aspect-[4/5] max-w-md mx-auto relative group">
-              <img src="assets/images/Elegant Gold Jewellery.png" 
-                   onerror="this.onerror=null; this.src='assets/images/Wool and Knit.jpg';"
-                   alt="The Little Loom Handcrafted Collection" 
-                   class="w-full h-full object-cover">    
+            <div class="relative max-w-md mx-auto">
               
-              <!-- Floating Brand Card Badge -->
-              
+              <!-- Main Softly Framed Rectangle (24px radius, terracotta border) -->
+              <div class="hero-editorial-wrap aspect-[4/5] relative group">
+                <img src="assets/images/Elegant Gold Jewellery.png?auto=format&fit=crop&w=1000&q=85" 
+                     onerror="this.onerror=null; this.src='assets/images/Wool and Knit.jpg';"
+                     alt="Handmade Everlasting Crochet Sunflowers & Bouquet" 
+                     class="w-full h-full object-cover">
                 
-              
+                <!-- Floating Category Pill in top-left -->
+                <div class="absolute top-3.5 left-3.5 z-10">
+                  <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/95 backdrop-blur-sm text-[0.68rem] font-bold text-[#6E3823] border border-[#E9DFD1] shadow-xs">
+                    <span class="w-1.5 h-1.5 rounded-full bg-[#B8795E]"></span>
+                    Everlasting Blooms
+                  </span>
+                </div>
+
+                <!-- Floating Caption Note at Bottom
+                <div class="hero-caption-note">
+                  <div class="flex items-center gap-2.5">
+                    <img src="assets/images/logo.svg" alt="Little Loom Logo" class="w-9 h-9 rounded-full border border-[#D4C6B3] bg-white flex-shrink-0">
+                    <div>
+                      <h5 class="text-xs font-serif font-semibold text-[#40352F]">The Little Loom</h5>
+                      <p class="text-[0.68rem] text-[#6E3823] font-medium">“Little Thread, Big Love”</p>
+                    </div>
+                  </div>
+                  <span class="text-[0.65rem] font-bold text-[#6C775B] bg-[#EBF0E6] px-2.5 py-1 rounded-full whitespace-nowrap">★ 5.0 (1,200+ Loved)</span>
+                </div>
+              </div> -->
+
+              <!-- Floating Collage Accent Card: Botanical Candles
+              <div class="hidden sm:flex items-center gap-3 absolute -bottom-5 -left-6 bg-white/95 backdrop-blur-md p-2.5 pr-4 rounded-2xl border-2 border-white shadow-soft z-20 max-w-[240px]">
+                <img src="assets/images/Botanical Glow.jpg" alt="Botanical Soy Candle" class="w-12 h-12 rounded-xl object-cover border border-[#E9DFD1] flex-shrink-0">
+                <div class="min-w-0">
+                  <span class="text-[0.62rem] uppercase font-bold tracking-wider text-[#A3AD91] block">Soy &amp; Scent</span>
+                  <h6 class="text-xs font-serif font-medium text-[#40352F] truncate">Botanical Candles</h6>
+                  <p class="text-[0.65rem] text-[#6E3823] font-semibold">From ₹299</p>
+                </div>
+              </div> -->
+
+              <!-- Floating Tag on top right -->
+              <div class="hidden sm:flex items-center gap-2 absolute -top-3 -right-3 bg-white/95 backdrop-blur-md py-1 px-3 rounded-full border border-[#E9DFD1] shadow-xs z-20">
+                <span class="w-2 h-2 rounded-full bg-[#B8795E]"></span>
+                <span class="text-[0.68rem] font-medium text-[#40352F]">100% Cotton &amp; Soy</span>
+              </div>
+
             </div>
           </div>
 
